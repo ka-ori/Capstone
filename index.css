@@ -1,0 +1,401 @@
+
+/* styles.css */
+@font-face {
+    font-family: 'Porter Sans Block';
+    src: url('fonts/PorterSansBlock.woff2') format('woff2'),
+         url('fonts/PorterSansBlock.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body {
+    width: Fixed (1,440px)px;
+    height: Hug (3,249px)px;
+    min-height: 900px;
+    top: -1625px;
+    left: -720px;
+    padding: 0px 48px 0px 48px;
+    gap: 0px;
+    opacity: 0px;
+    background: #E8F4E7;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px; 
+    background-color: #E8F4E7; 
+    border-bottom: 1px solid #000;
+    position: fixed;
+    width: calc(100% - 32px); 
+    top: 0; 
+    left: 0; 
+    z-index: 1000; 
+    box-sizing: border-box; 
+}
+
+header .logo {
+    font-family: 'Porter Sans Block';
+    font-size: 42px;
+    font-weight: 400;
+    color: #000;
+    white-space: nowrap;
+    padding-left : 20px;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    gap: 24px; 
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap; 
+}
+
+header nav ul li {
+    margin: 0; 
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: #007B5E; 
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; 
+        align-items: flex-start; 
+        padding: 16px;
+        width: 100%;
+    }
+
+    header nav ul {
+        flex-direction: column; 
+        gap: 16px; 
+    }
+}
+
+/* Hero Section */
+.hero {
+    text-align: center; 
+    background-color: #E8F4E7; 
+    padding: 40px 20px; 
+    margin-top: 100px; 
+}
+
+.hero h1 {
+    font-family: Calistoga;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 120px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color : #1C221B;
+}
+
+.hero img {
+    max-width: 100%; 
+    height: auto; 
+    border-radius: 10px; 
+    margin-top: 20px; 
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 48px;
+}
+
+.item {
+    text-align: center;
+}
+
+.item img {
+    width: 416px;
+    height: 277px;
+    border: 1px solid #000;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.item p {
+    font-family: 'Courier Prime';
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color :  #1C221B;
+}
+
+.item p span {
+    font-family: 'Courier Prime';
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color : #1C221B;
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (min-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 48px;
+    }
+}
+/* Description Section */
+.description {
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.8; 
+    color: #1C221B; 
+    text-align: left; 
+    max-width: 800px; 
+    margin: 0 48px 0 auto; 
+    padding: 0; 
+    background-color: #E8F4E7;
+    box-sizing: border-box;
+    word-wrap: break-word; 
+}
+
+@media (max-width: 768px) {
+    .description {
+        font-size: 18px; 
+        max-width: 100%;
+        margin: 16px auto; 
+        text-align: center; 
+        padding: 0 16px; 
+    }
+}
+
+
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-color: #E8F4E7;
+    padding: 20px 48px;
+    font-family: 'Courier Prime', monospace;
+    color: #1C221B;
+}
+
+.contact-column {
+    text-align: left;
+}
+
+.contact-column p {
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Footer Section */
+footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 48px;
+    background-color: #E8F4E7;
+    border-top: 1px solid #000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.footer-content p {
+    font-family: Calistoga;
+font-size: 28px;
+font-weight: 400;
+line-height: 32px;
+letter-spacing: -0.01em;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+
+}
+
+
+.contact-button {
+    font-family: Courier Prime;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+    padding: 8px 16px;
+    border: 1px solid gray;
+    border-radius : 8px;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #1C221B;
+    color: #E8F4E7;
+}
+
+.contact-title{
+    padding-left : 45px;
+    font-family: Calistoga;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: -0.01em;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+
+}
+
+
+/* General Transitions */
+* {
+    transition: all 0.3s ease; 
+}
+
+header nav ul li a {
+    text-decoration: none;
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000;
+    transition: color 0.3s ease, text-shadow 0.3s ease; 
+}
+
+header nav ul li a:hover {
+    color: #007B5E;
+    text-shadow: 0px 0px 4px rgba(0, 123, 94, 0.8); 
+}
+
+
+.hero h1 {
+    font-family: Calistoga;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 120px;
+    letter-spacing: -0.02em;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #1C221B;
+    transition: transform 0.5s ease, color 0.5s ease; 
+}
+
+.hero h1:hover {
+    transform: scale(1.02); 
+    color: #007B5E; 
+}
+
+.item img {
+    width: 416px;
+    height: 277px;
+    border: 1px solid #000;
+    opacity: 1;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.item:hover img {
+    transform: scale(1.05); 
+    opacity: 0.9; 
+}
+
+.item p {
+    font-family: 'Courier Prime', monospace;
+    font-size: 20px;
+    color: #1C221B;
+    text-align: left;
+    margin-top: 8px;
+    transition: transform 0.3s ease, font-weight 0.3s ease, color 0.3s ease; 
+}
+
+.item p span {
+    font-size: 17px;
+}
+
+
+.item:hover p {
+    transform: scale(1.1); 
+    font-weight: bold; 
+    color: #007B5E; 
+}
+
+
+.footer_contact {
+    display: inline-block;
+    font-family: 'Courier Prime', monospace;
+    font-size: 18px;
+    font-weight: bold;
+    color: #1C221B;
+    background-color: #E8F4E7;
+    padding: 8px 16px;
+    border: 1px solid #1C221B;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.footer_contact:hover {
+    background-color: #1C221B;
+    color: #E8F4E7;
+    transform: scale(1.1); 
+}
+
+
+.contact-info {
+    text-align: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.contact-info:hover {
+    color: #007B5E;
+    transform: translateY(-5px); 
+}
+
+.contact-section{
+    width: Fill (1,344px)px;
+    height: Hug (312px)px;
+    padding: 48px 0px 48px 0px;
+    gap: 24px;
+    border: 0px 0px 1px 0px;
+    opacity: 0px;
+    
+}
