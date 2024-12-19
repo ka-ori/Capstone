@@ -11,8 +11,6 @@ body {
     width: auto ;
     height: auto ;
     min-height: 900px;
-    top: -1625px;
-    left: -720px;
     padding: 0px 48px 0px 48px;
     gap: 0px;
     opacity: 0px;
@@ -297,11 +295,6 @@ text-align: left;
         margin-left: 100px;
     }
 }
-
-
-/* Footer Section */
-
-
 
 /* General Transitions */
 * {
